@@ -1,6 +1,6 @@
 ---
 - name: Configure Docker on Deployserver
-  hosts: alls
+  hosts: all
   become: true
   tasks:
   - name: apt updating
@@ -16,4 +16,4 @@
     become: yes
     become_user: root
   - name: Deploy the Image from DockerHub and Run as Container
-    command: docker run -itd -p 8089:8081 sowjanyaparupally/insureprojectdec3:latest
+    command: docker run -itd -p 8089:8081 sowjanyaparupally/insurance:latest
