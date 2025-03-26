@@ -26,8 +26,8 @@ pipeline {
             }
     stage('Login to Dockerhub') {
       steps {
-      withCredentials([string(credentialsId: 'dockercode', variable: 'dockervarcode')]) {
-        // withCredentials([usernamePassword(credentialsId: 'dockercode', passwordVariable: 'dockerpass', usernameVariable: 'username')]) {
+      withCredentials([string(credentialsId: 'dockercode1', variable: 'dockervarcode')]) {
+        // withCredentials([usernamePassword(credentialsId: 'dockercode1', passwordVariable: 'dockerpass', usernameVariable: 'username')]) {
 
         sh 'docker login -u sowjanyaparupally -p ${dockervarcode}'
                                                                     }
