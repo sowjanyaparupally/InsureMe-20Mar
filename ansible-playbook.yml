@@ -17,4 +17,4 @@
     become_user : root
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8089:8081 sowjanyaparupally/insure-me:3.0
+    command: docker run -itd -p 8089:8081 sowjanyaparupally/insurance:latest
