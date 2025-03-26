@@ -38,7 +38,7 @@ pipeline {
         sh 'docker push sowjanyaparupally/insurance:latest'
                                 }
             }
-    stage('Ansbile config and Deployment') {
+    stage('Ansbile Playbook') {
       steps {
         ansiblePlaybook credentialsId: 'sshkey', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'deploy.yml', vaultTmpPath: ''
                                }
